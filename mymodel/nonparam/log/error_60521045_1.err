@@ -1,0 +1,57 @@
+
+------------------------------------------------------------------------
+       Segmentation violation detected at Tue Sep 10 10:54:53 2024
+------------------------------------------------------------------------
+Architecture     : glnxa64
+Processor ID     : Intel(R) Xeon(R) Platinum 8480+
+Host Name        : cpu-r-64
+Locale           : en_US
+
+
+Abnormal termination:
+Segmentation violation
+
+Current Thread: 'GTP_0' id 22813256374016
+
+Register State (from fault):
+  RAX = 000014bfa00ab560  RBX = 00000000022c4440
+  RCX = 000014bfb23fb8fa  RDX = 00000000022d1a50
+  RSP = 000014bfa00ab530  RBP = 000014bfa00ab600
+  RSI = 0000000000000000  RDI = 00000000022d1a50
+
+   R8 = 0000000000000000   R9 = 000000000000000b
+  R10 = 0000000000258b94  R11 = 0000000000000206
+  R12 = 000014bf9806cea8  R13 = 0000000000000000
+  R14 = 0000000000000000  R15 = 614d2e2f6b726f77
+
+  RIP = 000014bfa0163564  EFL = 0000000000010246
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x000014bfa0163564 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libDeclarativeServices.so.1.5.6+00193892
+[  1] 0x000014bfa01640f3 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libDeclarativeServices.so.1.5.6+00196851
+[  2] 0x000014bfb267d327 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libCppMicroServices.so.3.8.0+00471847
+[  3] 0x000014bfb26b38cb /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libCppMicroServices.so.3.8.0+00694475
+[  4] 0x000014bfb26b57bb /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libCppMicroServices.so.3.8.0+00702395
+[  5] 0x000014bfb26b5bf9 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libCppMicroServices.so.3.8.0+00703481
+[  6] 0x000014bfb29f3f60 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libmwcppmicroservices.so+00442208
+[  7] 0x000014bfb29f45cf /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libmwcppmicroservices.so+00443855
+[  8] 0x000014bfb29f8304 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libmwcppmicroservices.so+00459524
+[  9] 0x000014bfb29f9107 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libmwcppmicroservices.so+00463111 _ZN10foundation16cppmicroservices15installAndStartEN2fl10filesystem10basic_pathIcDsNS2_6detail11path_traitsIcDsEEEE+00000551
+[ 10] 0x000014bf9fe9c845 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/cppmicroservices_compendium/foundation/cppmicroservices/managementagentimpl/mwManagementAgentImpl.so+00059461
+[ 11] 0x000014bf9fe9ceb9 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/cppmicroservices_compendium/foundation/cppmicroservices/managementagentimpl/mwManagementAgentImpl.so+00061113
+[ 12] 0x000014bfa00efaff /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libConfigurationAdmin.so.1.3.6+00269055
+[ 13] 0x000014bfa00f03ba /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libConfigurationAdmin.so.1.3.6+00271290
+[ 14] 0x000014bfa00f8299 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libConfigurationAdmin.so.1.3.6+00303769
+[ 15] 0x000014bfb23f9e97                             /lib64/libpthread.so.0+00065175
+[ 16] 0x000014bfa00ea298 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libConfigurationAdmin.so.1.3.6+00246424
+[ 17] 0x000014bfb161cc34 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libmwfoundation_threadpool.so+00146484
+[ 18] 0x000014bfb1621928 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libmwfoundation_threadpool.so+00166184
+[ 19] 0x000014bfb1621d54 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/libmwfoundation_threadpool.so+00167252
+[ 20] 0x000014bfb22a18c3 /rds/user/mx235/hpc-work/.MathWorks/ServiceHost/cpu-r-64/v2024.2.1.0/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00903363
+[ 21] 0x000014bfb23f21ca                             /lib64/libpthread.so.0+00033226
+[ 22] 0x000014bfb1e078d3                                   /lib64/libc.so.6+00235731 clone+00000067
+
+
+** This crash report has been written to /home/mx235/.MathWorks/ServiceHost/cpu-r-64/logs/MathWorksServiceHost_crash_2590658.log **

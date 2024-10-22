@@ -1,0 +1,3 @@
+mkdir: cannot create directory ‘/home/mx235/.MathWorks’: File exists
+slurmstepd: error: *** JOB 60543055 ON cpu-q-464 CANCELLED AT 2024-09-10T21:11:37 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 60543055.0 ON cpu-q-464 CANCELLED AT 2024-09-10T21:11:37 DUE TO TIME LIMIT ***

@@ -1,0 +1,109 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2024 The MathWorks, Inc.
+             R2024a Update 1 (24.1.0.2568132) 64-bit (glnxa64)
+                               March 28, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                  Value       StandardError    TStatistic      PValue   
+                __________    _____________    __________    ___________
+
+    Constant    4.1463e-06     6.5299e-06       0.63497          0.52545
+    AR{1}          0.96434       0.026778        36.012      5.3397e-284
+    MA{1}         -0.97475       0.023594       -41.314                0
+    Variance    4.3056e-05     1.2933e-06        33.291      5.1394e-243
+
+[Warning: Lower bound constraints are active; standard errors may be inaccurate.] 
+[> In arima/estimate (line 1242)
+In run_tvp_mymodel_tot (line 36)] 
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                   Value       StandardError    TStatistic      PValue  
+                ___________    _____________    __________    __________
+
+    Constant    -2.9071e-05     1.2856e-05       -2.2612        0.023746
+    AR{1}           0.42146       0.092105        4.5758      4.7435e-06
+    MA{1}          -0.24473       0.093941       -2.6051       0.0091837
+    Variance     1.5633e-07     3.2821e-08        4.7629      1.9079e-06
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0          13          15.8013                      8.64e+04
+     1          78         -6.11166    1.45206e-07             66  
+     2         143         -6.36791        279.196           83.4  
+     3         169         -6.37857       0.306785           96.7  
+     4         195          -6.4045             10           86.4  
+     5         273         -7.32119        13.4553           90.6  
+     6         312         -7.32525      0.0563293            116  
+     7         325         -7.35422              1            108  
+     8         338         -7.40217              1            131  
+     9         351         -7.41348              1            140  
+    10         364         -7.47895              1            196  
+    11         377         -7.51781              1            211  
+    12         390         -7.63661              1            237  
+    13         416         -7.73933            0.5            205  
+    14         429         -7.76054              1            134  
+    15         442         -7.80233              1            165  
+    16         455         -7.82894              1            177  
+    17         468         -7.85072              1            140  
+    18         481         -7.86364              1            155  
+    19         494         -7.86846              1           86.1  
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+    20         507         -7.87727              1            102  
+    21         520          -7.8881              1            115  
+    22         533         -7.91987              1            132  
+    23         546         -7.95527              1            154  
+    24         559         -7.97702              1            149  
+    25         572         -7.98426              1            117  
+    26         585         -7.98951              1             88  
+    27         598          -7.9965              1           60.8  
+    28         611         -8.00484              1           49.9  
+    29         624         -8.01367              1           96.7  
+    30         637         -8.02064              1            120  
+    31         650         -8.03125              1           51.2  
+    32         663         -8.03333              1             57  
+    33         676         -8.03606              1           13.4  
+    34         689          -8.0367              1           15.7  
+    35         702         -8.03723              1           12.7  
+    36         715         -8.03793              1           13.5  
+    37         728         -8.03817              1           11.2  
+    38         754         -8.03827       0.559261           11.7  
+    39         767         -8.03836              1           5.68  
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+    40         780         -8.03843              1           8.06  
+    41         793         -8.03848              1           6.48  
+    42         806         -8.03853              1           10.5  
+    43         819         -8.03858              1           7.23  
+    44         845         -8.03861            0.5            5.2  
+    45         858         -8.03865              1           9.29  
+    46         871         -8.03872              1           8.58  
+    47         884         -8.03875              1           18.9  
+    48         897         -8.03887              1           8.44  
+    49         910           -8.039              1           15.1  
+    50         923         -8.03911              1           5.59  
+    51         936         -8.03913              1            6.6  
+    52         949         -8.03916              1           1.49  
+    53         962         -8.03916              1           1.05  
+    54         975         -8.03917              1          0.877  
+    55         988         -8.03917              1           1.35  
+
+Optimization stopped because the norm of the current step, 8.403347e-07, is
+less than options.StepTolerance = 1.000000e-06.
+
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 28)
+In run_tvp_mymodel_tot (line 107)] 
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 60)
+In run_tvp_mymodel_tot (line 107)] 

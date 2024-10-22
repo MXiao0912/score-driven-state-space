@@ -1,0 +1,83 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2024 The MathWorks, Inc.
+             R2024a Update 1 (24.1.0.2568132) 64-bit (glnxa64)
+                               March 28, 2024
+
+[Warning: Unable to load Toolbox Path Cache
+/home/mx235/.matlab/R2024a/toolbox_cache-24.1.0-962784411-glnxa64.xml. The
+cache file is not in the correct format. It will be regenerated upon quitting
+MATLAB.] 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                  Value       StandardError    TStatistic      PValue   
+                __________    _____________    __________    ___________
+
+    Constant    6.3066e-05     9.3463e-05       0.67477          0.49982
+    AR{1}          0.58226        0.25066        2.3229         0.020184
+    MA{1}         -0.53831        0.26107       -2.0619         0.039218
+    Variance    3.2156e-05     8.5552e-07        37.586      3.6022e-309
+
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                   Value       StandardError    TStatistic      PValue   
+                ___________    _____________    __________    ___________
+
+    Constant    -3.2159e-06     2.8404e-05       -0.11322         0.90986
+    AR{1}           0.91616      0.0039059         234.56               0
+    MA{1}          -0.30326       0.012061        -25.144     1.6365e-139
+    Variance      1.192e-06     4.5094e-08         26.433     5.7151e-154
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0          13         -6.98796                      1.28e+03
+     1         104         -7.54022    9.70879e-07            187  
+     2         143         -7.72235        5.09361            106  
+     3         169         -7.73829       0.345334            115  
+     4         195         -7.79857        4.26221           67.2  
+     5         208         -7.80723              1           66.1  
+     6         221          -7.8185              1             47  
+     7         234         -7.82414              1           53.3  
+     8         247         -7.84102              1           61.7  
+     9         273         -7.86553       0.411354           96.2  
+    10         286         -7.87679              1           83.7  
+    11         299         -7.90449              1           79.7  
+    12         312         -7.91343              1           52.9  
+    13         325         -7.93213              1           45.5  
+    14         338         -7.95659              1            115  
+    15         351         -7.97821              1            122  
+    16         377         -7.99418       0.418685           64.8  
+    17         390         -8.00236              1           30.9  
+    18         403         -8.00325              1           19.3  
+    19         416         -8.00365              1           15.9  
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+    20         429         -8.00613              1           19.1  
+    21         442         -8.00863              1           19.5  
+    22         455         -8.00896              1           12.6  
+    23         468         -8.00906              1           1.73  
+    24         481         -8.00906              1           1.25  
+    25         494         -8.00908              1           1.08  
+    26         507         -8.00908              1          0.955  
+    27         520         -8.00909              1          0.616  
+    28         533          -8.0091              1          0.277  
+    29         546          -8.0091              1           0.13  
+    30         559          -8.0091              1           0.13  
+
+Optimization stopped because the norm of the current step, 5.905615e-07, is
+less than options.StepTolerance = 1.000000e-06.
+
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 28)
+In run_tvp_mymodel_tot (line 107)] 
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 60)
+In run_tvp_mymodel_tot (line 107)] 

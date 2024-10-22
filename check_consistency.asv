@@ -1,0 +1,17 @@
+all_var = NaN(14, 91);
+for T=100:200
+    run sim_dgp_flex_T.m
+    run sim_est_corr1.m
+
+    ContrLossToMinmize = @(vparam) ContributionLogLik(vparam, y, mean_ft);
+    TT = size(y,2)-2; 
+    
+    % HHessian = fdhess2(LossToMinmize, EstimParamsNew);
+    jac = fdjacob(ContrLossToMinmize, EstimParams);
+    HHessianSand = jac'*jac; 
+
+    VARIANZA_Coeffs =inv(HHessianSand);
+
+    all_var(:,T) = VARIANZA_Coeffs;
+end
+

@@ -1,0 +1,78 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2024 The MathWorks, Inc.
+             R2024a Update 1 (24.1.0.2568132) 64-bit (glnxa64)
+                               March 28, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                  Value       StandardError    TStatistic      PValue   
+                __________    _____________    __________    ___________
+
+    Constant    0.00010335     0.00013706       0.75406          0.45081
+    AR{1}          0.45131        0.14717        3.0666        0.0021648
+    MA{1}         -0.35647        0.15581       -2.2878         0.022152
+    Variance    3.5954e-05     1.0102e-06         35.59      2.0047e-277
+
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                  Value       StandardError    TStatistic      PValue  
+                __________    _____________    __________    __________
+
+    Constant    4.1965e-05     1.9823e-05         2.117        0.034261
+    AR{1}          0.36206         0.2316        1.5633         0.11799
+    MA{1}         -0.24552        0.23444       -1.0473         0.29498
+    Variance    3.8843e-07     4.7359e-08         8.202      2.3646e-16
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0          13         -7.60315                       1.6e+03
+     1         104         -7.89122    6.75243e-07            332  
+     2         182         -8.23253         4.0951            285  
+     3         221         -8.27049      0.0178102            199  
+     4         234         -8.29477              1            564  
+     5         247         -8.34515              1            105  
+     6         260         -8.35226              1           80.2  
+     7         273         -8.37898              1            143  
+     8         286         -8.38832              1            110  
+     9         299         -8.40984              1            141  
+    10         312         -8.41765              1             80  
+    11         325         -8.42213              1            113  
+    12         338         -8.42851              1           95.7  
+    13         351          -8.4365              1           55.7  
+    14         364         -8.44155              1           61.4  
+    15         377         -8.44511              1           28.7  
+    16         390         -8.44618              1             17  
+    17         403          -8.4465              1           12.5  
+    18         416         -8.44665              1           11.1  
+    19         429         -8.44698              1           13.3  
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+    20         442         -8.44747              1           19.2  
+    21         455         -8.44794              1           15.1  
+    22         468         -8.44818              1           8.29  
+    23         481         -8.44823              1           3.42  
+    24         494         -8.44825              1           3.13  
+    25         507         -8.44827              1           3.28  
+    26         520         -8.44828              1           1.67  
+    27         533         -8.44828              1          0.444  
+    28         546         -8.44828              1          0.444  
+    29         559         -8.44828              1          0.444  
+
+Optimization stopped because the norm of the current step, 7.076348e-07, is
+less than options.StepTolerance = 1.000000e-06.
+
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 28)
+In run_tvp_mymodel_tot (line 107)] 
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 60)
+In run_tvp_mymodel_tot (line 107)] 

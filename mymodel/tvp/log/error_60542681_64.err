@@ -1,0 +1,7 @@
+mkdir: cannot create directory ‘/home/mx235/.MathWorks’: File exists
+{Error using chol
+Matrix must be positive definite.
+
+Error in run_pilot_mymodel (line 166)
+        residual{i} = chol(Res.invF_t{i})*Res.v_t{i};
+} 

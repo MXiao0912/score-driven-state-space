@@ -1,0 +1,64 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2024 The MathWorks, Inc.
+             R2024a Update 1 (24.1.0.2568132) 64-bit (glnxa64)
+                               March 28, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                  Value       StandardError    TStatistic     PValue 
+                __________    _____________    ___________    _______
+
+    Constant    0.00021218      0.0028391         0.074738    0.94042
+    AR{1}            2e-12         13.171       1.5184e-13          1
+    MA{1}       -0.0017003         13.171      -0.00012909     0.9999
+    Variance    0.00010883     2.0505e-06           53.072          0
+
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                  Value       StandardError    TStatistic      PValue  
+                __________    _____________    __________    __________
+
+    Constant    0.00023685     3.8142e-05        6.2098       5.305e-10
+    AR{1}          0.46875       0.064552        7.2616      3.8243e-13
+    MA{1}        -0.099103       0.075532       -1.3121          0.1895
+    Variance    8.8935e-07     7.2409e-08        12.282      1.1264e-34
+
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0          13          -7.9876                           365
+     1         104          -8.0357    3.43464e-07            333  
+     2         117         -8.13589              1            222  
+     3         143         -8.16559       0.339423            266  
+     4         169         -8.22155            0.5            209  
+     5         195         -8.22726        0.16141             70  
+     6         221         -8.23021        0.47748             69  
+     7         247          -8.2313       0.572041           54.9  
+     8         260         -8.23255              1           36.1  
+     9         273          -8.2341              1           28.2  
+    10         286         -8.23534              1           22.2  
+    11         299         -8.23572              1           30.8  
+    12         325         -8.23582            0.5           13.1  
+    13         338         -8.23591              1           5.24  
+    14         351         -8.23593              1           2.39  
+    15         364         -8.23594              1          0.933  
+    16         377         -8.23594              1          0.338  
+    17         390         -8.23594              1         0.0604  
+
+Optimization stopped because the norm of the current step, 4.172229e-07, is
+less than options.StepTolerance = 1.000000e-06.
+
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 28)
+In run_tvp_mymodel_tot (line 107)] 
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 60)
+In run_tvp_mymodel_tot (line 107)] 

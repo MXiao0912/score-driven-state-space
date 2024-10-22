@@ -1,0 +1,114 @@
+function [EstimParams, FullParams] = sim_est_corr1(obs, mean_ft, method, verbose, InitialParams, fixedParams)
+% [psi, phi, initF1] = nonparam_tvp(obs);
+
+ % [PositiveTrans, InvPositiveTrans, DerPositiveTrans, ...
+ %     UnoMenoUno, InvUnoMenoUno, DerUnoMenoUno, ...
+ %     LogisticFun, MaxZero, InvMaxZero, DerMaxZero, vec] = Useful_Transformations();
+
+% run Useful_Transformations
+
+% user-specify A and B
+A = InvMaxZero(0.99, 0.9*ones(4,1)); 
+B = InvMaxZero(0.1, [0.015*ones(4,1)]);
+c = (eye(4)-diag(MaxZero(0.99, A)))*mean_ft;
+kap_hes = InvMaxZero(.5,.015);
+mom_ = InvMaxZero(1, 0.5);
+
+InitialParams = [kap_hes;c;A;B;mom_];
+% fixedParams = [InvUnoMenoUno(0.6);InvUnoMenoUno(0.8);zeros(3,1); NaN(1); mean_ft(1:3); NaN(2,1); InvMaxZero(0.99, zeros(3,1)); NaN(2,1); InvMaxZero(0.99, zeros(3,1)); NaN(2,1);NaN(1)];
+fixedParams = [InvUnoMenoUno(0.6);InvUnoMenoUno(0.8);zeros(3,1); NaN(1); NaN(4,1); NaN(4,1); NaN(4,1); NaN(1)];
+% fixedParams = [InvUnoMenoUno(0.6);InvUnoMenoUno(0.8);zeros(3,1); NaN(1); NaN(3,1); mean_ft(4:5); NaN(3,1); InvMaxZero(0.99, zeros(2,1)); NaN(3,1); InvMaxZero(0.99, zeros(2,1));NaN(1)];
+% fixedIndices = [3:5,7:11,12:21];
+
+y = table2array(obs(:,{'price','nav'}))';
+
+
+LossToMinmize = @(vparam) -kf_tvp_corr1(insertParams(variableParams, fixedParams),y, mean_ft)/(size(y,2)-1);
+
+function [stop,options,optchanged] = displayXValues(optimValues,options,flag)
+    % This function is called at each iteration
+    x = optimValues.x; % Current point (x values)
+
+    % Convert the vector to a string using arrayfun
+    xStr = strjoin(arrayfun(@(xi) sprintf('%.6f', xi), x, 'UniformOutput', false), ' ');
+
+    % Display the iteration number and x values
+    fprintf('Iteration %d: x = [%s]\n', optimValues.iteration, xStr);
+
+    % disp(['Iteration ', num2str(optimvalues.iteration), ': x = ', num2str(x)]);
+    stop = false; % Return false so the algorithm continues
+    optchanged = false;
+end
+
+function [stop,options,optchanged] = displayXValues_fminunc(x,options,flag)
+    % This function is called at each iteration
+
+    % Convert the vector to a string using arrayfun
+    xStr = strjoin(arrayfun(@(xi) sprintf('%.6f', xi), x, 'UniformOutput', false), ' ');
+
+    % Display the iteration number and x values
+    fprintf(xStr);
+
+    % disp(['Iteration ', num2str(optimvalues.iteration), ': x = ', num2str(x)]);
+    stop = false; % Return false so the algorithm continues
+    optchanged = false;
+end
+
+if method=="csminwel"
+
+    % optionsIVAN = optimoptions('fminunc', 'Display', 'iter-detailed','MaxFunEvals',1000, 'StepTolerance', 1e-10,'OutputFcn', @displayXValues_fminunc);
+    optionsIVAN = optimoptions('fminunc', 'Display', 'iter-detailed','MaxFunEvals',1000, 'StepTolerance', 1e-10);
+    [fhat,EstimParams] = csminwel(LossToMinmize,InitialParams,eye(size(InitialParams,1))*.5,[] ,1e-20,1000);
+    
+elseif method=="fminunc"
+
+    if verbose
+        optionsIVAN = optimoptions('fminunc', 'Display', 'iter-detailed','MaxFunEvals',1000, 'StepTolerance', 1e-10,'OutputFcn', @displayXValues_fminunc);
+    else
+        optionsIVAN = optimoptions('fminunc', 'Display', 'iter-detailed','MaxFunEvals',1000, 'StepTolerance', 1e-10);
+    end
+    [EstimParams] = fminunc(LossToMinmize,InitialParams,optionsIVAN);
+
+elseif method =="patternsearch"
+    
+    if verbose
+        options = optimoptions('patternsearch', ...
+        'MaxIterations', 300, ... 
+        'UseParallel', true, ...
+        'Display', 'iter',...
+        'OutputFcn', @displayXValues, ...
+        'ConstraintTolerance', 1e-6, ...
+        'MeshExpansionFactor', 1+1e-6,...
+        'MeshContractionFactor', 1-1e-6);
+    else
+        options = optimoptions('patternsearch', ...
+        'MaxIterations', 300, ... 
+        'UseParallel', true, ...
+        'Display', 'iter',...
+        'ConstraintTolerance', 1e-6, ...
+        'MeshExpansionFactor', 1+1e-6,...
+        'MeshContractionFactor', 1-1e-6);
+    end
+
+    [EstimParams, fval] = patternsearch(LossToMinmize, InitialParams, [], [], [], [], [], [], options);
+end
+
+FullParams = insertParams(EstimParams, fixedParams);
+
+psi = UnoMenoUno(FullParams(1))
+phi = UnoMenoUno(FullParams(2))
+err_mean = FullParams(3:5)
+
+kap_hes = MaxZero(.5,FullParams(6))
+c = FullParams(7:10)
+A = MaxZero(0.99, FullParams(11:14))
+B = MaxZero(0.1, FullParams(15:18))
+mom = MaxZero(1,FullParams(19))
+
+% solution 1: use score without scaling : try with the original scaling (more sensitive to later scores)
+% solution 2: reduce the number of tvp to 3 if Fdot only have 3 unique rows
+% solution 3: more smoothing
+% question: why originally we think all 5 params could be identified?
+
+
+end

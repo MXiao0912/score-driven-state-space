@@ -1,0 +1,119 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2024 The MathWorks, Inc.
+             R2024a Update 1 (24.1.0.2568132) 64-bit (glnxa64)
+                               March 28, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                  Value       StandardError    TStatistic    PValue 
+                __________    _____________    __________    _______
+
+    Constant    0.00021877     0.00073031         0.29955    0.76452
+    AR{1}            2e-12         3.2357       6.181e-13          1
+    MA{1}       -0.0062511         3.2334      -0.0019333    0.99846
+    Variance    3.8314e-05     8.0628e-07          47.519          0
+
+ 
+    ARIMA(1,0,1) Model (Gaussian Distribution):
+ 
+                  Value       StandardError    TStatistic      PValue  
+                __________    _____________    __________    __________
+
+    Constant    0.00019339     3.3177e-05         5.829      5.5773e-09
+    AR{1}          0.73075        0.01072        68.168               0
+    MA{1}          -0.2262       0.018516       -12.216      2.5539e-34
+    Variance    1.8603e-06     9.2968e-08         20.01      4.4743e-89
+
+[Warning: Rank deficient, rank = 2, tol =  1.011111e-13.] 
+[> In misdata (line 152)
+In misdata (line 115)
+In run_tvp_mymodel_tot (line 41)
+] 
+[Warning: Rank deficient, rank = 2, tol =  1.004398e-13.] 
+[> In misdata (line 152)
+In misdata (line 115)
+In run_tvp_mymodel_tot (line 41)
+] 
+[Warning: Rank deficient, rank = 2, tol =  1.004143e-13.] 
+[> In misdata (line 152)
+In misdata (line 115)
+In run_tvp_mymodel_tot (line 41)
+] 
+[Warning: Rank deficient, rank = 2, tol =  1.004135e-13.] 
+[> In misdata (line 152)
+In misdata (line 115)
+In run_tvp_mymodel_tot (line 41)
+] 
+[Warning: Rank deficient, rank = 2, tol =  1.004135e-13.] 
+[> In misdata (line 152)
+In misdata (line 115)
+In run_tvp_mymodel_tot (line 41)
+] 
+[Warning: Rank deficient, rank = 2, tol =  1.004135e-13.] 
+[> In misdata (line 152)
+In misdata (line 115)
+In run_tvp_mymodel_tot (line 41)
+] 
+[Warning: Rank deficient, rank = 2, tol =  1.004135e-13.] 
+[> In misdata (line 152)
+In misdata (line 115)
+In run_tvp_mymodel_tot (line 41)
+] 
+[Warning: Rank deficient, rank = 2, tol =  1.004135e-13.] 
+[> In misdata (line 152)
+In misdata (line 115)
+In run_tvp_mymodel_tot (line 41)
+] 
+[Warning: Rank deficient, rank = 2, tol =  1.004135e-13.] 
+[> In misdata (line 152)
+In misdata (line 115)
+In run_tvp_mymodel_tot (line 41)
+] 
+[Warning: Rank deficient, rank = 2, tol =  1.004135e-13.] 
+[> In misdata (line 152)
+In run_tvp_mymodel_tot (line 41)
+] 
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+     0          13         -7.77558                           132
+     1          91         -7.80932     2.8061e-06           74.9  
+     2         104          -7.8261              1           37.9  
+     3         117         -7.83886              1            129  
+     4         130         -7.85239              1           40.3  
+     5         143         -7.85778              1           29.4  
+     6         169         -7.87173       0.685966           70.5  
+     7         182         -7.87228              1           33.2  
+     8         208         -7.87514       0.429375           23.8  
+     9         221         -7.87647              1           9.96  
+    10         234         -7.87678              1           16.3  
+    11         247         -7.87687              1           12.4  
+    12         260         -7.87718              1           7.86  
+    13         286         -7.87729       0.313031           6.28  
+    14         299         -7.87734              1           9.33  
+    15         312         -7.87738              1           2.69  
+    16         325         -7.87739              1           1.24  
+    17         338         -7.87739              1           1.04  
+    18         351         -7.87741              1          0.509  
+    19         364         -7.87741              1          0.435  
+                                                        First-order 
+ Iteration  Func-count       f(x)        Step-size       optimality
+    20         377         -7.87741              1          0.176  
+    21         390         -7.87741              1         0.0689  
+
+Optimization stopped because the norm of the current step, 8.115520e-07, is
+less than options.StepTolerance = 1.000000e-06.
+
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 28)
+In run_tvp_mymodel_tot (line 107)] 
+[Warning: P is less than the smallest tabulated value, returning 0.001.] 
+[> In jbtest (line 136)
+In gen_diagnostics (line 60)
+In run_tvp_mymodel_tot (line 107)] 

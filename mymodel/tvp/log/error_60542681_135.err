@@ -1,0 +1,4 @@
+mkdir: cannot create directory ‘/home/mx235/.MathWorks’: File exists
+srun: Job step aborted: Waiting up to 122 seconds for job step to finish.
+slurmstepd: error: *** JOB 60543082 ON cpu-q-496 CANCELLED AT 2024-09-10T21:11:37 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 60543082.0 ON cpu-q-496 CANCELLED AT 2024-09-10T21:11:37 DUE TO TIME LIMIT ***

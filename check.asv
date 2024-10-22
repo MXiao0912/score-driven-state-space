@@ -1,0 +1,6 @@
+A = InvUnoMenoUno(0.9*ones(5,1)); 
+B = InvMaxZero(0.1, [0.015*ones(5,1)]);
+
+true_param = [InvUnoMenoUno(0.6);InvUnoMenoUno(0.8);zeros(3,1); kap_hes; f_intercept; A; B]
+
+[LL, Res]=kf_tvp(true_param,y, mean_ft) 

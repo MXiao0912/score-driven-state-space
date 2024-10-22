@@ -1,0 +1,7 @@
+mkdir: cannot create directory ‘/home/mx235/.MathWorks’: File exists
+{Error using gen_diagnostics
+Too many output arguments.
+
+Error in run_tvp_mymodel_tot (line 107)
+    [p_jb_p, p_arch_p, p_lb_p,p_jb_n, p_arch_n, p_lb_n]=gen_diagnostics(px_nav, resid);
+} 

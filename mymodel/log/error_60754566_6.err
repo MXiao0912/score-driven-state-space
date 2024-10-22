@@ -1,0 +1,66 @@
+mkdir: cannot create directory ‘/home/mx235/.MathWorks’: File exists
+
+--------------------------------------------------------------------------------
+          Segmentation violation detected at 2024-09-12 19:02:27 +0100
+--------------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding           : Disabled - No sandbox or build area path
+  Crash Mode               : continue (default)
+  Default Encoding         : UTF-8
+  Deployed                 : false
+  GNU C Library            : 2.28 stable
+  Graphics Driver          : Uninitialized software 
+  Graphics card 1          : 0x102b ( 0x102b ) 0x536 Version 0.0.0.0 (0-0-0)
+  Java Version             : Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  MATLAB Architecture      : glnxa64
+  MATLAB Entitlement ID    : 1245576
+  MATLAB Root              : /usr/local/Cluster-Apps/matlab/R2024a
+  MATLAB Version           : 24.1.0.2568132 (R2024a) Update 1
+  OpenGL                   : software
+  Operating System         : "Rocky Linux release 8.10 (Green Obsidian)"
+  Process ID               : 1375448
+  Processor ID             : x86 Family 6 Model 106 Stepping 6, GenuineIntel
+  Session Key              : 472710fe-a645-400c-8de5-b4da6271be22
+  Window System            : No active display
+
+Fault Count: 1
+
+
+Abnormal termination:
+Segmentation violation
+
+Current Thread: 'GTP_5' id 22999970035456
+
+Register State (from fault):
+  RAX = 0000000000000050  RBX = 000014eb190b2a00
+  RCX = 0000000000000000  RDX = 0000000000000000
+  RSP = 000014eb190b2950  RBP = 000014eb190b2a50
+  RSI = 000014eaec246790  RDI = 000014eb190b29f0
+
+   R8 = 000014ea4c3e1ee8   R9 = 000014eaf00008dc
+  R10 = 000014eae06829d0  R11 = 0000000000000004
+  R12 = 000014eb190b29f0  R13 = 000014eaf016d8a0
+  R14 = 00000000ffffffe5  R15 = 000014eb190b29a0
+
+  RIP = 000014ea4c39f494  EFL = 0000000000010202
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x000014ea4c39f494 /usr/local/Cluster-Apps/matlab/R2024a/bin/glnxa64/ddux/ddux_matlab/ddux_matlab/mwddux_matlab.so+00586900
+[  1] 0x000014eb3ab36e0f /usr/local/Cluster-Apps/matlab/R2024a/bin/glnxa64/cppmicroservices_compendium/ddux_fctrl_impl/../../../../bin/glnxa64/libmwddux.so+00126479
+[  2] 0x000014eb50783d14 /usr/local/Cluster-Apps/matlab/R2024a/bin/glnxa64/libmwfoundation_threadpool.so+00163092
+[  3] 0x000014eb50787f10 /usr/local/Cluster-Apps/matlab/R2024a/bin/glnxa64/libmwfoundation_threadpool.so+00179984
+[  4] 0x000014eb507886a9 /usr/local/Cluster-Apps/matlab/R2024a/bin/glnxa64/libmwfoundation_threadpool.so+00181929
+[  5] 0x000014eb50f97d10 /usr/local/Cluster-Apps/matlab/R2024a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00879888
+[  6] 0x000014eb5109f1ca                             /lib64/libpthread.so.0+00033226
+[  7] 0x000014eb50b0a8d3                                   /lib64/libc.so.6+00235731 clone+00000067
+
+** This crash report has been saved to disk as /home/mx235/matlab_crash_dump.1375448-1 **
+
+
+
+MATLAB is exiting because of fatal error
+srun: error: cpu-q-451: task 0: Killed
+srun: Force Terminated StepId=60754679.0
